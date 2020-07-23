@@ -188,7 +188,7 @@ namespace RedVsGreen
                 if(x > y || x>=1000 || y >= 1000)
                 {
                     Console.WriteLine("Rules: x <=y<1 000");
-                    throw;
+                    return;
                 }
             }
             catch (Exception e)
