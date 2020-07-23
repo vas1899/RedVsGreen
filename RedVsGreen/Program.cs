@@ -1,4 +1,11 @@
 ﻿//Vasil Kolev
+/*
+ * In class Grid there is an array that stores all the objects of cells from the class Cell
+ * In class Cell there is a list that has all the adjacents of the current cell
+ * The program checks all the adjacents and if has to change the condition in the next generation
+ * It does that for every cell
+ * and then the cells takes the values for the next generation 
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -178,6 +185,11 @@ namespace RedVsGreen
             {
                 x = int.Parse(xStr);
                 y = int.Parse(yStr);
+                if(x > y || x>=1000 || y >= 1000)
+                {
+                    Console.WriteLine("Rules: x <=y<1 000");
+                    throw;
+                }
             }
             catch (Exception e)
             {
